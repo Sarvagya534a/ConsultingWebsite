@@ -1,5 +1,16 @@
 import FadeIn from "./FadeIn";
 
+const processSteps = [
+  {
+    title: "I understand your business",
+    body: "Placeholder description goes here. Two short lines about getting to know who you serve, what you sell, and where the friction actually lives.",
+  },
+  {
+    title: "I understand your daily operations",
+    body: "Placeholder description goes here. Two short lines about sitting with the day-to-day — the tools, the handoffs, the small repeated tasks.",
+  },
+];
+
 const questions = [
   {
     number: "1",
@@ -18,12 +29,15 @@ const questions = [
   },
 ];
 
+const labelClass =
+  "text-xs font-medium uppercase tracking-[0.2em] text-accent";
+
 export default function HowIWork() {
   return (
     <section id="how-i-work" className="px-6 py-28 sm:py-36">
       <div className="mx-auto flex max-w-container flex-col items-center text-center">
         <FadeIn className="flex flex-col items-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+          <span className={labelClass}>
             {/* PLACEHOLDER */}
             How I Work
           </span>
@@ -39,7 +53,47 @@ export default function HowIWork() {
           </h2>
         </FadeIn>
 
-        <div className="mt-20 grid w-full grid-cols-1 gap-14 sm:gap-12 md:mt-24 md:grid-cols-3 md:gap-10">
+        {/* Block 1 — My process */}
+        <FadeIn className="mt-20 flex flex-col items-center md:mt-24">
+          <span className={labelClass}>
+            {/* PLACEHOLDER */}
+            The Process
+          </span>
+        </FadeIn>
+
+        <div className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-12 sm:gap-10 md:grid-cols-2 md:gap-14">
+          {processSteps.map((step, i) => (
+            <FadeIn
+              key={step.title}
+              delay={i * 120}
+              className="flex flex-col items-center px-2 text-center"
+            >
+              <h3 className="font-serif text-xl leading-snug text-ink sm:text-2xl">
+                {/* PLACEHOLDER */}
+                {step.title}
+              </h3>
+              <p className="mt-3 max-w-[360px] text-sm leading-relaxed text-ink-soft sm:text-base">
+                {/* PLACEHOLDER */}
+                {step.body}
+              </p>
+            </FadeIn>
+          ))}
+        </div>
+
+        {/* Divider */}
+        <FadeIn className="my-20 md:my-24">
+          <div aria-hidden className="h-px w-16 bg-ink/15" />
+        </FadeIn>
+
+        {/* Block 2 — The questions I ask */}
+        <FadeIn className="flex flex-col items-center">
+          <span className={labelClass}>
+            {/* PLACEHOLDER */}
+            The Questions I Ask
+          </span>
+        </FadeIn>
+
+        <div className="mt-12 grid w-full grid-cols-1 gap-14 sm:gap-12 md:grid-cols-3 md:gap-10">
           {questions.map((q, i) => (
             <FadeIn
               key={q.number}
