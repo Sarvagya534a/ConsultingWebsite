@@ -4,9 +4,9 @@ const labelClass =
   "text-xs font-medium uppercase tracking-[0.2em] text-accent";
 
 const questions = [
-  "Where is time being lost?",
-  "Which steps can intelligent systems handle?",
-  "What changes free up the most output?",
+  "How often does this slow the work down?",
+  "Can an intelligent system handle it reliably?",
+  "What does fixing it actually free up?",
 ];
 
 export default function HowIWork() {
@@ -58,30 +58,43 @@ export default function HowIWork() {
           </span>
           <h3 className="mt-5 font-serif text-2xl leading-snug text-ink sm:text-3xl md:text-[2rem]">
             {/* PLACEHOLDER */}
-            We find the bottlenecks — and streamline them with intelligent
-            systems.
+            We find the bottlenecks — and decide which ones are worth solving.
           </h3>
           <p className="mt-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg">
             {/* PLACEHOLDER */}
-            Together we figure out where the time is really going, and where
-            intelligent systems can free up real output — saving hours, lifting
-            production, and keeping what makes your work yours.
+            Not every slow step is worth touching. For each bottleneck we
+            surface, I keep coming back to three honest questions.
           </p>
 
-          <div className="mt-10 flex flex-col items-center">
-            <p className="text-sm text-ink-soft sm:text-base">
-              {/* PLACEHOLDER */}
-              Three questions I keep coming back to:
-            </p>
-            <ul className="mt-4 flex flex-col items-center gap-2 font-serif italic text-ink-soft">
-              {questions.map((q) => (
-                <li key={q} className="text-lg sm:text-xl">
-                  {/* PLACEHOLDER */}
-                  {q}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="mt-8 flex flex-col items-center gap-2 font-serif italic text-ink-soft">
+            {questions.map((q) => (
+              <li key={q} className="text-lg sm:text-xl">
+                {/* PLACEHOLDER */}
+                {q}
+              </li>
+            ))}
+          </ul>
+        </FadeIn>
+
+        {/* Step 3 */}
+        <FadeIn
+          delay={240}
+          className="mt-24 flex w-full max-w-[640px] flex-col items-center md:mt-28"
+        >
+          <span className={labelClass}>
+            {/* PLACEHOLDER */}
+            Finally
+          </span>
+          <h3 className="mt-5 font-serif text-2xl leading-snug text-ink sm:text-3xl md:text-[2rem]">
+            {/* PLACEHOLDER */}
+            We design intelligent systems that streamline the work — and free up
+            real output.
+          </h3>
+          <p className="mt-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg">
+            {/* PLACEHOLDER */}
+            A line or two about building the right intelligent systems — saving
+            hours, lifting production, and keeping what makes your work yours.
+          </p>
         </FadeIn>
 
         <FadeIn className="mt-24 md:mt-28">
